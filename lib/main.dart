@@ -57,14 +57,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
                 ),
-                color: Colors.red,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    spreadRadius: 4,
-                    blurRadius: 7,
-                    offset: Offset(0, 3),
+                    color: Colors.black.withOpacity(0.3),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 2),
                   ),
+
                 ],
               ),
               child: ClipRRect(
