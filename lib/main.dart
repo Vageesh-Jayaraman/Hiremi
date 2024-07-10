@@ -71,8 +71,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
+                  bottomLeft: Radius.circular(45),
+                  bottomRight: Radius.circular(45),
                 ),
                 child: BottomAppBar(
                   color: Colors.white,
