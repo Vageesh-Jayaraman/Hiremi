@@ -64,7 +64,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
                     blurRadius: 5,
                     offset: Offset(0, 2),
                   ),
-
                 ],
               ),
               child: ClipRRect(
@@ -80,7 +79,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   notchMargin: 20.0,
                   child: Container(
                     height: 60,
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -97,7 +96,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                               : _imagePaths['applies_unselected']!),
                           onPressed: () => _onItemTapped(1),
                         ),
-                        SizedBox(width: 40),
+                        SizedBox(width: 60),
                         IconButton(
                           icon: Image.asset(_selectedIndex == 2
                               ? _imagePaths['queries_unselected']!
@@ -118,19 +117,39 @@ class _BottomNavBarState extends State<BottomNavBar> {
               ),
             ),
             Center(
-              child: Container(
-                margin: EdgeInsets.only(bottom: 20),
-                width: 110.0,
-                height: 110.0,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-
-                ),
-                child: Image.asset(
-                  _imagePaths['hiremi']!,
-                  fit: BoxFit.contain,
-                ),
-              ),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  Container(
+                    width: 110.0,
+                    height: 55.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFB13634),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(55.0),
+                        bottomRight: Radius.circular(55.0),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 110.0,
+                    height: 110.0,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.transparent,
+                        width: 5.0,
+                      ),
+                    ),
+                    child: ClipOval(
+                      child: Image.asset(
+                        _imagePaths['hiremi']!,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ),
           ],
         ),
